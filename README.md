@@ -30,6 +30,80 @@ Learn, share, and riff on other people’s work. Tap into an ever-growing librar
 Generous Free Tier
 Weekly prompt refreshes ensure you can keep iterating and building out new concepts without extra costs.
 ## Tech Stack
+# SmartContent: AI-Powered Content Platform
+
+SmartContent is a Next.js application that implements an advanced Retrieval-Augmented Generation (RAG) agent with context-aware responses, dynamic data retrieval, and external API integration. This application provides intelligent features like personalized content recommendations and automated content generation.
+
+## Features
+
+- **RAG-Powered AI Assistant**: Chat with an AI assistant that provides context-aware responses based on your knowledge base
+- **Content Generation**: Generate high-quality content tailored to your preferences and needs
+- **Knowledge Base Management**: Add web pages and text to your personal knowledge base
+- **Personalized Recommendations**: Get content recommendations based on your preferences and history
+- **Authentication**: Secure authentication with Supabase Auth
+- **Vector Search**: Efficient similarity search with pgvector and Supabase
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, Tailwind CSS, shadcn/ui
+- **Backend**: Next.js API Routes, Supabase
+- **Database**: PostgreSQL with pgvector (via Supabase)
+- **Authentication**: Supabase Auth
+- **AI**: LangChain, OpenAI
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Supabase account
+- OpenAI API key
+
+### Environment Variables
+
+Create a `.env.local` file with the following variables:
+
+\`\`\`
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+OPENAI_API_KEY=your_openai_api_key
+\`\`\`
+
+### Database Setup
+
+1. Create a new Supabase project
+2. Enable the Vector extension in the SQL editor:
+   \`\`\`sql
+   CREATE EXTENSION IF NOT EXISTS vector;
+   \`\`\`
+3. Run the `setup.sql` script in the Supabase SQL editor to create the necessary tables and functions
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   \`\`\`
+   npm install
+   \`\`\`
+3. Run the development server:
+   \`\`\`
+   npm run dev
+   \`\`\`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Deployment
+
+This application is designed to be deployed on Vercel:
+
+1. Push your code to a GitHub repository
+2. Import the repository in Vercel
+3. Add the environment variables
+4. Deploy
+
+## License
+
+MIT
 
 ### Frontend
 - React 18+
